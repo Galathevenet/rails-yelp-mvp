@@ -1,9 +1,7 @@
-<h1>My Amazing Restaurants</h1>
+<h1 class='navbar'>My Amazing Restaurants</h1> <%= link_to "Add a restaurant", new_restaurant_path %>
 
-<u>
+<ul class="list-group">
 <% @restaurants.each do |restaurant| %>
-<li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+<li class="list-group-item"><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
 <% end %>
-</u>
-
-<%= link_to "Add a restaurant", new_restaurant_path %>
+</ul>
